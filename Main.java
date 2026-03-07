@@ -10,6 +10,7 @@ public class Main {
 		tablaDeMultiplicar();
 		calificacionesPromedio();
 		generadorCoreoElectronico();
+		generarUsuario();
 	}
 	//EjercicioNo.1
 	static void tablaDeMultiplicar() {
@@ -42,10 +43,10 @@ public class Main {
 	//EjercicioNo.3
 	static void generadorCoreoElectronico() {
 		
-		System.out.print("Ingrese su nombre: ");
+		System.out.println("Ingrese su nombre: ");
 		String nombre = Sc.nextLine();
 
-		System.out.print("Ingrese su apellido: ");
+		System.out.println("Ingrese su apellido: ");
 		String apellido = Sc.nextLine();
 
 		
@@ -56,5 +57,19 @@ public class Main {
 		String correo = nombreProcesado + "" + apellidoProcesado + "@umg.edu.gt";
 
 		System.out.println("Correo creado: " + correo);
+	}
+	//EjercicioNo.4
+	static void generarUsuario() {
+		System.out.println("Ingrese su nombre:");
+		String nombre = Sc.nextLine();
+		
+		System.out.println("Ingrese su apellido:");
+		String apellido = Sc.nextLine();
+		
+		String inicialNombre = nombre.toLowerCase().replace(" "," ");
+		String inicialApellido = apellido.toLowerCase().replace(" "," ");
+		
+		String usuario = inicialNombre + " " +"->"+ " "+ inicialApellido;
+		System.out.println("Usuario creado:" + usuario);
 	}
 }
