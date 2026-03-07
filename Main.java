@@ -9,6 +9,7 @@ public class Main {
 		
 		tablaDeMultiplicar();
 		calificacionesPromedio();
+		generadorCoreoElectronico();
 	}
 	//EjercicioNo.1
 	static void tablaDeMultiplicar() {
@@ -24,18 +25,36 @@ public class Main {
 		double promedio = 0 ;
 		
 		System.out.println("Ingrese: calificacion 1:");
-		double calificacion1 = Sc.nextInt();
+		double calificacion1 = Sc.nextDouble();
 		System.out.println("Ingrese: calificacion 2:");
-		double calificacion2 = Sc.nextInt();
+		double calificacion2 = Sc.nextDouble();
 		System.out.println("Ingrese: calificacion 3:");
-		double calificacion3 = Sc.nextInt();
+		double calificacion3 = Sc.nextDouble();
 		System.out.println("Ingrese: calificacion 4:");
-		double calificacion4 = Sc.nextInt();
+		double calificacion4 = Sc.nextDouble();
 		System.out.println("Ingrese: calificacion 5:");
 		double calificacion5 = Sc.nextInt();
 		
 		promedio = (calificacion1 + calificacion2+calificacion3+calificacion4+calificacion5)/5;
 		
 		System.out.println("El promedio es:" + promedio);
+	}
+	//EjercicioNo.3
+	static void generadorCoreoElectronico() {
+		
+		System.out.print("Ingrese su nombre: ");
+		String nombre = Sc.nextLine();
+
+		System.out.print("Ingrese su apellido: ");
+		String apellido = Sc.nextLine();
+
+		
+		String nombreProcesado = nombre.toLowerCase().replace(" ", "");
+		String apellidoProcesado = apellido.toLowerCase().replace(" ", "");
+
+		
+		String correo = nombreProcesado + "" + apellidoProcesado + "@umg.edu.gt";
+
+		System.out.println("Correo creado: " + correo);
 	}
 }
