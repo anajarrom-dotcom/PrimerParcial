@@ -7,6 +7,8 @@ public class Main {
 	 
 	public static void main(String[]args) {
 		
+		tablaDeMultiplicar();
+		calificacionesPromedio();
 	}
 	//EjercicioNo.1
 	static void tablaDeMultiplicar() {
@@ -16,5 +18,24 @@ public class Main {
 	
 		for(int i = 1; i <= 12; i++ ) 
 			System.out.println(numero + " x " + i + " = " + (numero * i));
+	}
+	//EjercicioNo.2
+	static void calificacionesPromedio() {
+		double promedio = 0 ;
+		
+		System.out.println("Ingrese: calificacion 1:");
+		double calificacion1 = Sc.nextInt();
+		System.out.println("Ingrese: calificacion 2:");
+		double calificacion2 = Sc.nextInt();
+		System.out.println("Ingrese: calificacion 3:");
+		double calificacion3 = Sc.nextInt();
+		System.out.println("Ingrese: calificacion 4:");
+		double calificacion4 = Sc.nextInt();
+		System.out.println("Ingrese: calificacion 5:");
+		double calificacion5 = Sc.nextInt();
+		
+		promedio = (calificacion1 + calificacion2+calificacion3+calificacion4+calificacion5)/5;
+		
+		System.out.println("El promedio es:" + promedio);
 	}
 }
